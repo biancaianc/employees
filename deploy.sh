@@ -1,4 +1,5 @@
 mvn clean install
+
 docker build -t employees .
 docker tag employees:latest 128556667010.dkr.ecr.eu-central-1.amazonaws.com/employees:latest
 docker push 128556667010.dkr.ecr.eu-central-1.amazonaws.com/employees:latest
