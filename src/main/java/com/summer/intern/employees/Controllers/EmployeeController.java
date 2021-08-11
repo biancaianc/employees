@@ -17,6 +17,11 @@ public class EmployeeController {
         return new ResponseEntity<>(employeeService.getEmployees(), HttpStatus.OK);
     }
 
+    @GetMapping("/getGet")
+    public String getGet() {
+        return "Get";
+    }
+
     @GetMapping("/getEmployee/{id}")
     public ResponseEntity<?> getEmployee(@PathVariable String id){
         if(employeeService.exist(id)) {
